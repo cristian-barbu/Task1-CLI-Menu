@@ -21,7 +21,7 @@ function solveQuadraticEquation($a, $b, $c){
     $tmp = $b**2 - 4*$a*$c;
     
     if ( $tmp < 0 ){
-        return null;
+        return [];
     }
 
     if ( $tmp == 0 ){

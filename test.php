@@ -86,7 +86,7 @@
     // if (is_null($number)){
     //     echo ' good';
     // }
-    // echo ' job\n';
+    // echo ' job\n'.$number."\n";
 
-    var_dump( $_SERVER['DOCUMENT_ROOT']);
+    //var_dump( $_SERVER['DOCUMENT_ROOT']);
 ?>

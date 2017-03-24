@@ -2,9 +2,14 @@
 $controllerFolder = "./controller";
 $utilsFolder = "./utilities";
 
-require_once $utilsFolder.'/io_utils.php';
+/* Include all utilities */
+foreach (glob($utilsFolder.'/*.php') as $filename)
+{
+    include_once $filename;
+}
+
 /* Include all controllers */
 foreach (glob($controllerFolder.'/*.php') as $filename)
 {
-    include_once $filename;
+    require_once $filename;
 }

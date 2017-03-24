@@ -7,9 +7,9 @@
  * @param string $errMsg
  * @return int
  */
-function getValidIngeterInput($msg = 'Please type a number: ', $errMsg = 'That was not a number'){
+function getValidIngeterInput($msg = 'Please type a number: ', $err = 'That was not a number'){
 
-    $userInput == null;
+    $userInput = null;
     while(is_null($userInput)){
         echo $msg;
         fscanf(STDIN, "%d\n", $userInput);
