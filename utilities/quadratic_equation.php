@@ -14,7 +14,7 @@ require_once('square_root.php');
  * @return array
  */
 function solveQuadraticEquation($a, $b, $c){
-    if( $a < 0 ){
+    if( $a == 0 ){
         return null; // TODO: check if you should solve the linear equation
     }
 

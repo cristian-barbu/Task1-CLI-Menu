@@ -15,7 +15,7 @@ function handleLCM() {
     $a = getValidIngeterInput('Give the first number: ');
     $b = getValidIngeterInput('Give the second number: ');
 
-    $result = gratestCommonDivisor($a, $b);
+    $result = leastCommonMultiple($a, $b);
     printf("\nThe result is: %d\n", $result);
 
     endMenu();

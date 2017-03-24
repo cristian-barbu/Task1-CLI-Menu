@@ -94,5 +94,9 @@
 $line = trim(fgets(STDIN)); // reads one line from STDIN
 fscanf(STDIN, "%d\n", $number); // reads number from STDIN
     */
+    $a = 7;
+    $b = 4;
+    list($a, $b) = [$b, $a%$b ];
+    echo "$a $b\n";
 ?>
 
