@@ -11,10 +11,10 @@
  * @return void
  */
 
-function runMenu(array $options, array $handlers, $welcomeMessage = "Chose something", $inputPrompt = ">> ", $inputError = "Invalid input\n", $inputRangeError="Plese select a valid option\n"){
+function runMenu(array $options, array $handlers, $welcomeMessage = "Chose something", $inputPrompt = ">> ", $exitMessage = 'Exit', $inputError = "Invalid input\n", $inputRangeError="Plese select a valid option\n"){
     $numberOfOptions = count($options);
     
-    $displayMessage = makeMenu($welcomeMessage, $options, $numberOfOptions, $inputPrompt);
+    $displayMessage = makeMenu($welcomeMessage, $options, $numberOfOptions, $exitMessage, $inputPrompt);
         
     while(true) {
         echo $displayMessage;
@@ -50,12 +50,12 @@ function runMenu(array $options, array $handlers, $welcomeMessage = "Chose somet
  * @param string $inputPrompt
  * @return string
  */
-function makeMenu($welcomeMessage, $options, $numberOfOptions, $inputPrompt){
+function makeMenu($welcomeMessage, $options, $numberOfOptions, $exitMessage, $inputPrompt){
     $displayMessage = $welcomeMessage."\n";
     foreach ($options as $index => $option){
         $displayMessage .= "[$index] $option\n";
     }
-    $displayMessage.= "[$numberOfOptions] Exit\n";
+    $displayMessage.= "[$numberOfOptions] $exitMessage\n";
     $displayMessage.= $inputPrompt;
     return $displayMessage;
 }

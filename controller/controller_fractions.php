@@ -18,6 +18,7 @@ function handleFractions() {
     /* Read the fractions and save them in the lists */
     while($numberOfFractions > 0){
         $fraction = readFraction();
+        
         if(checkFraction($fraction[0], $fraction[1])){ 
             array_push($numerators, $fraction[0]);
             array_push($denominators, $fraction[1]);
@@ -30,17 +31,30 @@ function handleFractions() {
     
     /* Compute the sum and print it */
     $result = addFractions($numerators, $denominators);
-    if(count($result) == 2){
-        echo "\n\n".'The sum is: ['.$result[0].'/'.$result[1]."]\n\n"; //TODO: Use string format you f-ing caveman
-    }elseif(count($result) == 1){
-        echo "\n\n".'The sum is: ['.$result[0]."]\n\n";
-    }else {
-        echo 'There was an error in the matrix'."\n";
-    }
     
+    printFraction($result);
+        
     endMenu();
 }
 
+/**
+ * Output the fraction sum.
+ * 
+ * @param array $result
+ * @return void
+ */
+function printFraction($result){
+    if(count($result) == 2){
+        echo "\n\n".'The sum is: ['.$result[0].'/'.$result[1]."]\n\n"; //TODO: Use string format you f-ing caveman
+        return;
+    }
+    if(count($result) == 1){
+        echo "\n\n".'The sum is: ['.$result[0]."]\n\n";
+        return;
+    }
+    echo 'There was an error in the matrix'."\n";
+    return;
+}
 
 /**
  * Reads the numerator and denominator and returns them

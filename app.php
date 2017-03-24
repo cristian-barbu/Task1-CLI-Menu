@@ -11,9 +11,10 @@ function main(){
     $mainMenuFunctions = [ 'handleQuadraticEquation', 'handleSquareRoot', 'handleGCD', 'handleLCM', 'handleFractions', 'handleBaseConversion' ];
     $mainMenuOptionMessage = 'Chose functionality:';
     $mainMenuImputPrompt = '>> ';
+    $mainMenuExitMessage = 'Close application';
     $mainMenuInputError = 'Invalid input, please type a number';
 
-    runMenu($mainMenuOptions, $mainMenuFunctions, $mainMenuOptionMessage, $mainMenuImputPrompt, $mainMenuInputError);
+    runMenu($mainMenuOptions, $mainMenuFunctions, $mainMenuOptionMessage, $mainMenuImputPrompt, $mainMenuExitMessage, $mainMenuInputError);
     exit;
 }
 

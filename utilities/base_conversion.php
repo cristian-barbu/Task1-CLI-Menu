@@ -72,10 +72,10 @@ function convertToDecimal($number_string, $base){
  * @return int
  */
 function mapToDec($symbol){
-    $pos = strpos('0123456789ABCDEF', $symbol);
+    $pos = strpos('0123456789ABCDEF', strtoupper($symbol));
     
     /* Return null if not a valid symbol */
-    if( !$pos ){
+    if( !is_numeric($pos) ){
         return null;
     }
 
