@@ -6,8 +6,8 @@
 
 function handleBaseConversion() {
 
-    $baseMenuOptions = [ 'From binary to decimal', 'From hexadecimal to decimal' ];
-    $baseMenuFunctions = [ 'handleBinaryToDecimal', 'handleHexToDecimal' ];
+    $baseMenuOptions = [ 'From binary to decimal', 'From hexadecimal to decimal', 'From decimal to binary', 'From binary to decimal' ];
+    $baseMenuFunctions = [ 'handleBinaryToDecimal', 'handleHexToDecimal', 'handleDecimalToBinary', 'handleDecimalToHex' ];
     $baseMenuOptionMessage = 'Chose which type of convertion you want:';
     $baseMenuInputPrompt = '>> ';
     $baseMenuExitMessage = 'Return to main menu';
@@ -19,13 +19,13 @@ function handleBaseConversion() {
 }
 
 function handleBinaryToDecimal(){
-    handleStringToDecimal(2, 'Type the binary number: ');
+    handleSequenceToDecimal(2, 'Type the binary number: ');
 }
 function handleHexToDecimal(){
-    handleStringToDecimal(16, 'Type the hexadecimal number: ');
+    handleSequenceToDecimal(16, 'Type the hexadecimal number: ');
 }
 
-function handleStringToDecimal($base, $msg){
+function handleSequenceToDecimal($base, $msg){
 
     $numberSequence = getValidNumberSequence($base, $msg);
 
@@ -34,4 +34,22 @@ function handleStringToDecimal($base, $msg){
     echo 'The decimal number is: '.$result."\n";
 
     endMenu(); //TODO: Think about how intellingent you were for not calling this just once in the runMenu
+}
+
+function handleDecimalToBinary(){
+    handleDecimalToSequence(2, 'Give the number you want to convert into binary: ');
+}
+function handleDecimalToHex(){
+    handleDecimalToSequence(16, 'Give the number you want to convert into hexadecimal: ');
+}
+function handleDecimalToSequence($base, $msg){
+
+    $number = getValidIngeterInput($msg);
+
+    $result = convertFromDecimal($number, $base);
+
+    echo "The decimal number $number has the following representation in base $base: $result\n";
+
+    endMenu();
+
 }
