@@ -26,6 +26,7 @@ function handleFractions() {
     while($numberOfFractions > 0){
         $fraction = readFraction();
         
+        /* Only add valid function */
         if(checkFraction($fraction[0], $fraction[1])){ 
             array_push($numerators, $fraction[0]);
             array_push($denominators, $fraction[1]);
