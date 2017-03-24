@@ -81,10 +81,12 @@
     // $a = implode($a);
     // echo "$a\n";
 
-    $number = null;
-    fscanf(STDIN, "%d\n", $number); // reads number from STDIN
-    if (is_null($number)){
-        echo ' good';
-    }
-    echo ' job\n';
+    // $number = null;
+    // fscanf(STDIN, "%d\n", $number); // reads number from STDIN
+    // if (is_null($number)){
+    //     echo ' good';
+    // }
+    // echo ' job\n';
+
+    var_dump( $_SERVER['DOCUMENT_ROOT']);
 ?>

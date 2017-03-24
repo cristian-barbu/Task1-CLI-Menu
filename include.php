@@ -1,12 +1,10 @@
 <?php
-$controller_folder = "./controller";
-$math_folder = "./utilities";
+$controllerFolder = "./controller";
+$utilsFolder = "./utilities";
 
+require_once $utilsFolder.'/io_utils.php';
 /* Include all controllers */
-foreach (glob($controller_folder.'/*.php') as $filename)
+foreach (glob($controllerFolder.'/*.php') as $filename)
 {
     include_once $filename;
 }
-
-
-?>

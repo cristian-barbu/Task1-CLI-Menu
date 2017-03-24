@@ -39,8 +39,6 @@ function runMenu(array $options, array $handlers, $welcomeMessage = "Chose somet
         call_user_func($handlers[$userInput]);
 
         //echo "TODO: Implement function call for input $userInput\n";
-        
-        
     }
     
 }
