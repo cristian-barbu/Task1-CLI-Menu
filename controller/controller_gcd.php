@@ -3,6 +3,11 @@
 //require_once '../utilities/io_utils.php';
 //require_once '../utilities/gratest_cummon_divisor.php';
 
+/**
+ * Handles the Grates Common Divisor sub-menu; Read two numbers and print the result
+ * 
+ * @return void
+ */
 function handleGCD() {
 
     echo 'Compute the grates cummon divisor of two numbers.'."\n";

@@ -13,7 +13,14 @@ function handleFractions() {
     $denominators = [];
 
     /* How many fractions to read */
-    $numberOfFractions = getValidIngeterInput('How many fractions do you want to add? ');
+    while(true){
+        $numberOfFractions = getValidIngeterInput('How many fractions do you want to add? ');
+        if($numberOfFractions > 1){
+            break;
+        }
+        echo 'You must read at least 2 fractions'."\n";
+    }
+    
 
     /* Read the fractions and save them in the lists */
     while($numberOfFractions > 0){
