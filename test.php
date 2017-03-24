@@ -89,4 +89,10 @@
     // echo ' job\n'.$number."\n";
 
     //var_dump( $_SERVER['DOCUMENT_ROOT']);
+
+    /*
+$line = trim(fgets(STDIN)); // reads one line from STDIN
+fscanf(STDIN, "%d\n", $number); // reads number from STDIN
+    */
 ?>
+

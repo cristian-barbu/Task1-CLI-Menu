@@ -37,8 +37,6 @@ function runMenu(array $options, array $handlers, $welcomeMessage = "Chose somet
 
         /* Call the handler for the chosen input */
         call_user_func($handlers[$userInput]);
-
-        //echo "TODO: Implement function call for input $userInput\n";
     }
     
 }
@@ -61,10 +59,4 @@ function makeMenu($welcomeMessage, $options, $numberOfOptions, $inputPrompt){
     $displayMessage.= $inputPrompt;
     return $displayMessage;
 }
-
-    /*
-$line = trim(fgets(STDIN)); // reads one line from STDIN
-fscanf(STDIN, "%d\n", $number); // reads number from STDIN
-    */
-
 ?>
