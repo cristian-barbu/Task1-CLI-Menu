@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Read an integer from STDIN; Retry if invalid input;
+ * 
+ * @param string $msg
+ * @param string $errMsg
+ * @return int
+ */
 function getValidIngeterInput($msg = 'Please type a number: ', $errMsg = 'That was not a number'){
 
     $userInput == null;

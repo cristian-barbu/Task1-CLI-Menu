@@ -10,7 +10,11 @@ function handleQuadraticEquation() {
     $numberOfFractions = getValidIngeterInput(true);
 
     while($numberOfFractions > 0){
-        
+        $fraction = readFraction();
+        if(checkFraction($fraction)){
+            numerators.push($fraction[0]);
+            denominators.push($fraction[0]);            
+        }
     }
     endMenu('I am handling quadratic equations');
 }
