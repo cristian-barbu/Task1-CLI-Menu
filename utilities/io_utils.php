@@ -19,6 +19,13 @@ function getValidIngeterInput($msg = 'Please type a number: ', $err = 'That was 
     return $userInput;
 }
 
+/**
+ * Ask the user for input, until a valid sequence of numbers in the given base is typed
+ * 
+ * @param int $base
+ * @param string $msg
+ * @return string
+ */
 function getValidNumberSequence($base, $msg){
     $userInput = null;
     while(is_null($userInput)){
@@ -34,6 +41,13 @@ function getValidNumberSequence($base, $msg){
     return $userInput;
 }
 
+/**
+ * Given the base, checks if any of the characters in the string can be conseidered valid digits.
+ * 
+ * @param string $userInput
+ * @param int $base
+ * @return boolean
+ */
 function isValidNumberSequence($userInput, $base){
     $userInput = str_split(strtoupper($userInput));
     foreach( $userInput as $digit ){

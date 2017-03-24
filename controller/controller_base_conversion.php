@@ -4,6 +4,11 @@
 //require_once '../utilities/base_convertion.php';
 //require_once '../utilities/menu.php';
 
+/**
+ * Displays the base convertion sub-menu and handles the input
+ * 
+ * @return void
+ */
 function handleBaseConversion() {
 
     $baseMenuOptions = [ 'From binary to decimal', 'From hexadecimal to decimal', 'From decimal to binary', 'From binary to decimal' ];
@@ -15,7 +20,6 @@ function handleBaseConversion() {
     
     runMenu($baseMenuOptions, $baseMenuFunctions,$baseMenuOptionMessage, $baseMenuInputPrompt, $baseMenuExitMessage,$baseMenuInputError);
     
-    // endMenu();
 }
 
 function handleBinaryToDecimal(){
@@ -24,7 +28,13 @@ function handleBinaryToDecimal(){
 function handleHexToDecimal(){
     handleSequenceToDecimal(16, 'Type the hexadecimal number: ');
 }
-
+/**
+ * Handle convertion TO base 10; Read 
+ * 
+ * @param int $base
+ * @param string $msg
+ * @return void
+ */
 function handleSequenceToDecimal($base, $msg){
 
     $numberSequence = getValidNumberSequence($base, $msg);
@@ -42,6 +52,13 @@ function handleDecimalToBinary(){
 function handleDecimalToHex(){
     handleDecimalToSequence(16, 'Give the number you want to convert into hexadecimal: ');
 }
+/**
+ * Handle convertion from base 10; Read number convert and print
+ * 
+ * @param int $base
+ * @param string $msg
+ * @return void
+ */
 function handleDecimalToSequence($base, $msg){
 
     $number = getValidIngeterInput($msg);
