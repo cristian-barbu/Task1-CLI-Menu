@@ -1,9 +1,12 @@
 <?php
+//require_once '../utilities/io_utils.php';
+//require_once '../utilities/square_root.php';
 
 function handleSquareRoot() {
 
-    // get input untill enough
-    // echo 'I am handling square root'."\n";
-    // fgets(STDIN);
-    endMenu('I am handling square root');
+    $number = getValidIngeterInput("Give the number: ");
+    $result = getSquareRoot($number);
+    printf("The square root of %d is %f\n", $number, $result);
+
+    endMenu();
 }
