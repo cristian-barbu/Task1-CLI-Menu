@@ -94,9 +94,15 @@
 $line = trim(fgets(STDIN)); // reads one line from STDIN
 fscanf(STDIN, "%d\n", $number); // reads number from STDIN
     */
-    $a = 7;
-    $b = 4;
-    list($a, $b) = [$b, $a%$b ];
-    echo "$a $b\n";
+    // $a = 7;
+    // $b = 4;
+    // list($a, $b) = [$b, $a%$b ];
+    // echo "$a $b\n";
+
+    include "./utilities/gratest_common_divisor.php";
+    for($i = 4; $i < 50; $i += 6){
+        $a = computeGCDSubstraction($i, $i+8);
+        echo "$i > $a\n";
+    }
 ?>
 
