@@ -34,7 +34,7 @@ function handleAllGCD($gcdFunction = 'gratestCommonDivisor') {
     $a = getValidIngeterInput('Give the first number: ');
     $b = getValidIngeterInput('Give the second number: ');
     //Call the argument function to compute the GCD
-    $result = call_user_func($gcdFunction, $a, $b);
+    $result = call_user_func($gcdFunction, abs($a), abs($b));
     printf("\nThe result is: %d\n", $result);
 
     endMenu();
