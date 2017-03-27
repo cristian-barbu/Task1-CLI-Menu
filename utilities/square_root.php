@@ -9,7 +9,7 @@
  */
 function getSquareRoot($number, $steps){
     if($number < 0){
-        return null;
+        return null; // Once again, learn exceptions
     }
     /* A good enough initial guess is $number/2 */
     $guess = $number / 2;

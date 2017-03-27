@@ -10,8 +10,14 @@
 function handleSquareRoot() {
 
     echo 'Compute the square root using the Babylonian Algorithm'."\n";
-
-    $number = getValidIngeterInput("Give the number: ");
+    while(true){
+        $number = getValidIngeterInput("Give the number: ");
+        if( $number >= 0){
+            break;
+        }
+        echo 'The number cannot be lass than 0';
+    }
+    
     $steps = getValidIngeterInput("Give the number of steps: ");
 
     $result = getSquareRoot($number, $steps);
