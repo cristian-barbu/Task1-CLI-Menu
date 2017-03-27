@@ -9,9 +9,11 @@
  */
 function getValidIngeterInput($msg = 'Please type a number: ', $err = 'That was not a number'){
     $userInput = null;
+    /* Get input untill a valid number is given */
     while(is_null($userInput)){
         echo $msg;
         fscanf(STDIN, "%d\n", $userInput);
+        /* If the input was not a number */
         if(is_null($userInput)){
             echo "\n".$err."\n";
         }
@@ -28,10 +30,11 @@ function getValidIngeterInput($msg = 'Please type a number: ', $err = 'That was 
  */
 function getValidNumberSequence($base, $msg){
     $userInput = null;
+    /* Get input untill a valid number in base $base is given */
     while(is_null($userInput)){
         echo $msg;
         $userInput = trim(fgets(STDIN));
-        
+        /* If the input only contains valid digits in base $base, return it */
         if( isValidNumberSequence($userInput, $base) ){
             return $userInput;
         }
@@ -75,6 +78,8 @@ function isValidNumberSequence($userInput, $base){
  */
 function endMenu($msg = '-- Press Enter To Continue --'){
     echo $msg."\n";
+    //Wait for enter to clear the screen
     fgets(STDIN);
+    //Clear the screen
     passthru('clear');
 }

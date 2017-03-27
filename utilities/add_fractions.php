@@ -12,24 +12,27 @@ require_once('gratest_common_divisor.php');
  */
 function addFractions(array $numerators, array $denominators){
     
+    /* Cancel if less than two fractions were given */
     $len = count($denominators);
     if( $len < 2){
         return null;
     }
+    /*Cancel if different number of numerators and denominators */
     if( count($numerators) != $len){
         return null;
     }
 
+    /* Compute the least common multiple */
     $lcm = 1;
     foreach ( $denominators as $denominator){
         $lcm = leastCommonMultiple($denominator, $lcm);
     }
-
+    /* Compute the sum of the numerators */
     $sum = 0;
     foreach ( $numerators as $index => $numerator){
         $sum += $numerator * ($lcm / $denominators[$index]);
     }
-
+    /* Retrun the integer value of the fraction if possible */
     if( $sum % $lcm == 0){
         return [ $sum / $lcm ];
     }
@@ -38,7 +41,7 @@ function addFractions(array $numerators, array $denominators){
 }
 
 /**
- * Simplifies a fraction
+ * Simplifies a fraction using the Gratest common divisor of the numerator and denominator
  * 
  * @param int $numerator
  * @param int $denominator

@@ -1,18 +1,6 @@
 <?php
 
 /**
- * Returns the gratest common divisor of two natural numbers.
- * 
- * TODO: Refactor all places that still call this method
- * @param int $a
- * @param int $b
- * @return int
- */
-function gratestCommonDivisor($a, $b){
-    return computeRecursiveGCD($a, $b);
-}
-
-/**
  * Computes the gratest common divisor of two natural numbers using .
  * 
  * @param int $a
@@ -34,15 +22,16 @@ function computeRecursiveGCD($a, $b){
  * @return int
  */
 function computeGCDSubstraction($a, $b){
+    // If one of the numbers is zero, return the other one
     if( $a == 0){
         return $b;
     }
     if( $b == 0){
         return $a;
     }
-    //untill the numbers are equal
+    //Untill the numbers are equal
     while ($a != $b){
-        //substract the smaller one from the larger one
+        //Substract the smaller one from the larger one
         if($a > $b ){
             $a-=$b;
         }else{
@@ -105,6 +94,19 @@ function computeBinaryGCD($a, $b){
     if( $a < $b ){
         return computeBinaryGCD(($b-$a)/2, $a);
     }
+}
+
+
+/**
+ * Returns the gratest common divisor of two natural numbers.
+ * 
+ * TODO: Refactor all places that still call this method
+ * @param int $a
+ * @param int $b
+ * @return int
+ */
+function gratestCommonDivisor($a, $b){
+    return computeRecursiveGCD($a, $b);
 }
 
 ?>

@@ -32,7 +32,7 @@ function handleQuadraticEquation() {
  * @return void
  */
 function printQuadricResult($result){
-    if(is_null($result)){
+    if(is_null($result) || count($result)==0){
         echo 'There is no solution'."\n";
         return;
     }
