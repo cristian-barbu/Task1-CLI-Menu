@@ -15,11 +15,11 @@ function addFractions(array $numerators, array $denominators){
     /* Cancel if less than two fractions were given */
     $len = count($denominators);
     if( $len < 2){
-        return null;
+        return null; // Null because we don't know exceptions
     }
     /*Cancel if different number of numerators and denominators */
     if( count($numerators) != $len){
-        return null;
+        return null; // Null because we don't know exceptions
     }
 
     /* Compute the least common multiple */
@@ -48,7 +48,13 @@ function addFractions(array $numerators, array $denominators){
  * @return array
  */
 function simplifyFraction($numerator, $denominator = 1){
-    $divisor = gratestCommonDivisor($numerator, $denominator);
+    /* Move the minus sign to the denominator to the numarator */
+    if($denominator < 0){
+        $denominator *= -1;
+        $numerator *= -1;
+    }
+    $divisor = abs(gratestCommonDivisor($numerator, $denominator));
+    //Return simplified fraction
     return [
         ($numerator / $divisor),
         ($denominator / $divisor)
