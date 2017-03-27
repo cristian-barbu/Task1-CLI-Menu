@@ -4,7 +4,7 @@
 //require_once '../utilities/quadratic_equation.php'
 
 function handleQuadraticEquation() {
-    echo 'Soving the equation a*x^2 + b*x + c = 0'."\n";
+    echo 'This will solve the equation a*x^2 + b*x + c = 0'."\n";
     
     //read the coeficients
     while(true){

@@ -8,7 +8,7 @@
  */
 function convertToDecimal($number_string, $base){
     
-    /* Map the number sequence, and assign a decimal value to each 
+    /* Go through number sequence, and assign a decimal value to each 
         digit; Save the values into an array.
      */
     $dec_array = array_map('mapToDec',str_split(strrev($number_string)));
@@ -16,7 +16,7 @@ function convertToDecimal($number_string, $base){
     $result = 0;
     $pow = 1; 
     foreach($dec_array as $digit){
-        /* At each step i, multiply the current digit by base to the power i and add it to the result */ 
+        /* At each step i, multiply the value of the current digit by base raised to the power i, and add it to the result */ 
         $result += $pow * $digit;
         $pow *= $base;
     }
