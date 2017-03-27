@@ -12,7 +12,7 @@ function handleGCD() {
 
     $gcdMenuOptions = [ 'Binary GCD', 'Repeated Divisions - Recursive', 'Repeated Divisions - Iterative', 'Repeated Substractions' ];
     $gcdMenuFunctions = [ 'handleBinaryGCD', 'handleRecursiveDivisionGCD', 'handleIterativeDivisionGCD', 'handleSubstractionGCD' ];
-    $gcdMenuOptionMessage = 'Chose which type of GCD method you want:';
+    $gcdMenuOptionMessage = 'Chose how the GCD should be computed:';
     $gcdMenuInputPrompt = '>> ';
     $gcdMenuExitMessage = 'Return to main menu';
     $gcdMenuInputError = 'Invalid input, please type a number';

@@ -53,7 +53,7 @@ function handleFractions() {
  */
 function printFraction($result){
     if(count($result) == 2){
-        echo "\n\n".'The sum is: ['.$result[0].'/'.$result[1]."]\n\n"; //TODO: Use string format you f-ing caveman
+        echo "\n\n".'The sum is: ['.$result[0].'/'.$result[1]."]\n\n"; 
         return;
     }
     if(count($result) == 1){

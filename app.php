@@ -7,7 +7,7 @@
 function main(){
     require_once 'include.php';
 
-    $mainMenuOptions = ['Solve a quadratic equation', 'Get the square root', 'Gratest Common Divisor', 'Least Common Multiple', 'Sum of fractions', 'Base convertions'];
+    $mainMenuOptions = ['Solve a quadratic equation', 'Compute the square root', 'Compute Gratest Common Divisor', 'Compute Least Common Multiple', 'Compute the sum of some fractions', 'Base convertions'];
     $mainMenuFunctions = [ 'handleQuadraticEquation', 'handleSquareRoot', 'handleGCD', 'handleLCM', 'handleFractions', 'handleBaseConversion' ];
     $mainMenuOptionMessage = 'Chose functionality:';
     $mainMenuImputPrompt = '>> ';

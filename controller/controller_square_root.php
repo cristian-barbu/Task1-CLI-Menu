@@ -9,7 +9,7 @@
  */
 function handleSquareRoot() {
 
-    echo 'Computes the square root using the Babylonian Algorithm'."\n";
+    echo 'Compute the square root using the Babylonian Algorithm'."\n";
 
     $number = getValidIngeterInput("Give the number: ");
     $steps = getValidIngeterInput("Give the number of steps: ");
